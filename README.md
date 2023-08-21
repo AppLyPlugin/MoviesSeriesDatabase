@@ -69,6 +69,9 @@ Watchlist Tab
 
 •	Clicking an item will display the detailed information of the item the same with Movies and Series tabs.
 
+![Watchlist](https://github.com/AppLyPlugin/MoviesSeriesDatabase/assets/5298665/7e560aaf-d585-4d23-8c0c-fed30d13abb6)
+![Contextual Action](https://github.com/AppLyPlugin/MoviesSeriesDatabase/assets/5298665/02106437-06ec-4dfa-a62f-677d2f964dce)
+![Menu Delete All](https://github.com/AppLyPlugin/MoviesSeriesDatabase/assets/5298665/19da39cc-4c65-4f36-a6a0-1b0b1913f81c)
 
 
 Detailed Activity
@@ -78,4 +81,6 @@ Detailed Activity
 •	Displays the name of the movie/series in the menu bar.
 
 •	Option(star icon) to add the specific movie/series to watchlist
+
+![Details Activity](https://github.com/AppLyPlugin/MoviesSeriesDatabase/assets/5298665/b4d7c084-6abd-431f-8315-79155492b507)
 
