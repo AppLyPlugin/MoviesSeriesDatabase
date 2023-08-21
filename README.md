@@ -75,3 +75,5 @@ Detailed Activity
 •	Displays the name of the movie/series in the menu bar.
 
 •	Option(star icon) to add the specific movie/series to watchlist
+
+![Details Activity](https://github.com/AppLyPlugin/MoviesSeriesDatabase/assets/5298665/6e023344-48e1-4f0f-af97-8e373a435be3)
