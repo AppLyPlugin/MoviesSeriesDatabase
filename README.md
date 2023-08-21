@@ -55,6 +55,9 @@ Movies and Series Tab:
 •	Datastore Repository for saving the filter selection of the current session
 
 
+![Api Display Response](https://github.com/AppLyPlugin/MoviesSeriesDatabase/assets/5298665/9b48f49d-716a-4f9f-9ff7-8031b4afb242)
+![Filter](https://github.com/AppLyPlugin/MoviesSeriesDatabase/assets/5298665/d485461b-e028-4c5a-9389-ba650737be18)
+![Search](https://github.com/AppLyPlugin/MoviesSeriesDatabase/assets/5298665/bc60e39e-0af6-4e5c-af39-8c1e09bdf1a6)
 
 Watchlist Tab
 
@@ -76,4 +79,3 @@ Detailed Activity
 
 •	Option(star icon) to add the specific movie/series to watchlist
 
-![Details Activity](https://github.com/AppLyPlugin/MoviesSeriesDatabase/assets/5298665/6e023344-48e1-4f0f-af97-8e373a435be3)
