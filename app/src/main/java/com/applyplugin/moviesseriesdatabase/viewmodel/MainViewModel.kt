@@ -1,4 +1,4 @@
-package com.applyplugin.moviesseriesdatabase
+package com.applyplugin.moviesseriesdatabase.viewmodel
 
 import android.app.Application
 import android.content.Context
@@ -132,6 +132,10 @@ class MainViewModel @Inject constructor(
             try {
                 val response = repository.remoteSource.searchMovies(searchQuery)
                 moviesseriesResponse.value = this.handleMoviesSeriesResponse(response)
+                val movies = moviesseriesResponse.value!!.data
+                if (movies != null) {
+                    offlineCacheMovieData(movies)
+                }
             } catch (e: Exception) {
                 moviesseriesResponse.value = NetworkResult.Error("Error API Limitation")
                 e.stackTrace
@@ -148,6 +152,10 @@ class MainViewModel @Inject constructor(
             try {
                 val response = repository.remoteSource.searchSeries(searchQuery)
                 moviesseriesResponse.value = this.handleMoviesSeriesResponse(response)
+                val series = moviesseriesResponse.value!!.data
+                if (series != null) {
+                    offlineCacheSeriesData(series)
+                }
             } catch (e: Exception) {
                 moviesseriesResponse.value = NetworkResult.Error("Error API Limitation")
                 e.stackTrace

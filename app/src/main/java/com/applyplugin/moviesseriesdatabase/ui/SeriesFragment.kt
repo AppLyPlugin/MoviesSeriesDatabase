@@ -17,7 +17,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.applyplugin.moviesseriesdatabase.MainViewModel
+import com.applyplugin.moviesseriesdatabase.viewmodel.MainViewModel
 import com.applyplugin.moviesseriesdatabase.R
 import com.applyplugin.moviesseriesdatabase.adapter.SeriesAdapter
 import com.applyplugin.moviesseriesdatabase.databinding.SeriesFragmentBinding

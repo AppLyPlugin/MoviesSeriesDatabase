@@ -15,6 +15,8 @@
             android:layout_height="100dp"
             android:alpha="0.5"
             android:src="@drawable/ic_frag_error"
+            readApiResponse="@{mainViewModel.moviesseriesResponse}"
+            readDatabase="@{mainViewModel.readMoviesData}"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +28,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.5"
+            readApiResponse="@{mainViewModel.moviesseriesResponse}"
+            readDatabase="@{mainViewModel.readMoviesData}"
             android:text="Error loading the page."
             android:textSize="20dp"
             android:textStyle="italic"
@@ -109,7 +113,7 @@
 
         <variable
             name="mainViewModel"
-            type="com.applyplugin.moviesseriesdatabase.MainViewModel" />
+            type="com.applyplugin.moviesseriesdatabase.viewmodel.MainViewModel" />
 
     </data>
 </layout>

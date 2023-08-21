@@ -1,4 +1,4 @@
-package com.applyplugin.moviesseriesdatabase.adapter
+package com.applyplugin.moviesseriesdatabase.bindingadapter
 
 import android.opengl.Visibility
 import android.view.View

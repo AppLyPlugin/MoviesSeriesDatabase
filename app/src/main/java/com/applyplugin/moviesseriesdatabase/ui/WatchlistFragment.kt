@@ -8,8 +8,6 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.FragmentManager
@@ -17,7 +15,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.applyplugin.moviesseriesdatabase.MainViewModel
+import com.applyplugin.moviesseriesdatabase.viewmodel.MainViewModel
 import com.applyplugin.moviesseriesdatabase.R
 import com.applyplugin.moviesseriesdatabase.adapter.WatchlistAdapter
 import com.applyplugin.moviesseriesdatabase.databinding.WatchlistFragmentBinding

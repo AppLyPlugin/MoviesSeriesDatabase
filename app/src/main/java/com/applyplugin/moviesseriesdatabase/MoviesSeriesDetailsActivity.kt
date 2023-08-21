@@ -16,9 +16,9 @@ import coil.size.Scale
 import com.applyplugin.moviesseriesdatabase.databinding.MoviesSeriesActivityDetailsBinding
 import com.applyplugin.moviesseriesdatabase.repository.database.entity.WatchlistEntity
 import com.applyplugin.moviesseriesdatabase.util.Constants
+import com.applyplugin.moviesseriesdatabase.viewmodel.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.time.delay
 import java.lang.StringBuilder
 
 @AndroidEntryPoint

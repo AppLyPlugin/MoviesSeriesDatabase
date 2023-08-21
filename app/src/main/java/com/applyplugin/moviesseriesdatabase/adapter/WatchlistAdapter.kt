@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.applyplugin.moviesseriesdatabase.MainViewModel
+import com.applyplugin.moviesseriesdatabase.viewmodel.MainViewModel
 import com.applyplugin.moviesseriesdatabase.R
 import com.applyplugin.moviesseriesdatabase.databinding.WatchlistRowLayoutBinding
 import com.applyplugin.moviesseriesdatabase.repository.database.entity.WatchlistEntity
