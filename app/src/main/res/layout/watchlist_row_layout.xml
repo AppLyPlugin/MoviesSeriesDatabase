@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/watchlistRowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/watchlistCardView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/material_dynamic_neutral90"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/watchlistThumbnail"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:imageUrl="@{watchlist.data.posterPath}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_margin="10dp"
+                    android:text="@{watchlist.data.title}"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/watchlistThumbnail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/watchlistThumbnail"
+                    app:layout_constraintTop_toTopOf="@+id/watchlistThumbnail"
+                    app:layout_constraintVertical_bias="0.100000024" />
+
+                <TextView
+                    android:id="@+id/titleOriginal"
+                    originalLang="@{watchlist.data.originalLanguage}"
+                    originalTitle="@{watchlist.data.originalTitle}"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/genre"
+                    app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                <TextView
+                    android:id="@+id/releaseDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@{watchlist.data.releaseDate}"
+                    app:layout_constraintStart_toEndOf="@+id/watchlistThumbnail"
+                    app:layout_constraintTop_toBottomOf="@+id/genre" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    doubleToString="@{watchlist.data.voteAverage}"
+                    setValueFontColor="@{watchlist.data.voteAverage}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Rating"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/watchlistThumbnail"
+                    app:layout_constraintTop_toBottomOf="@+id/releaseDate"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/genre"
+                    setGenres="@{watchlist.data.genreIds}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="GENRE"
+                    android:textSize="8sp"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toEndOf="@+id/watchlistThumbnail"
+                    app:layout_constraintTop_toBottomOf="@+id/titleOriginal" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="watchlist"
+            type="com.applyplugin.moviesseriesdatabase.repository.database.entity.WatchlistEntity" />
+
+    </data>
+</layout>

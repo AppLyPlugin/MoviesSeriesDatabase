@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.applyplugin.moviesseriesdatabase.ui.MoviesFragment"
+        android:label="@string/movies_frag"
+        tools:layout="@layout/movies_fragment" >
+        <action
+            android:id="@+id/action_moviesFragment_to_moviesSeriesBottomSheet"
+            app:destination="@id/moviesSeriesBottomSheet" />
+        <action
+            android:id="@+id/action_moviesFragment_to_detailsActivity"
+            app:destination="@id/moviesseriesDetailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesFragment"
+        android:name="com.applyplugin.moviesseriesdatabase.ui.SeriesFragment"
+        android:label="@string/series_frag"
+        tools:layout="@layout/series_fragment" >
+        <action
+            android:id="@+id/action_seriesFragment_to_moviesSeriesBottomSheet"
+            app:destination="@id/moviesSeriesBottomSheet" />
+        <action
+            android:id="@+id/action_seriesFragment_to_detailsActivity"
+            app:destination="@id/moviesseriesDetailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchlistFragment"
+        android:name="com.applyplugin.moviesseriesdatabase.ui.WatchlistFragment"
+        android:label="@string/watchlist_frag"
+        tools:layout="@layout/watchlist_fragment" >
+        <action
+            android:id="@+id/action_watchlistFragment_to_moviesDetailsActivity"
+            app:destination="@id/moviesseriesDetailsActivity" />
+    </fragment>
+    <dialog
+        android:id="@+id/moviesSeriesBottomSheet"
+        android:name="com.applyplugin.moviesseriesdatabase.ui.bottomsheet.MoviesSeriesBottomSheet"
+        android:label="MoviesSeriesBottomSheet">
+        <action
+            android:id="@+id/action_moviesSeriesBottomSheet_to_moviesFragment"
+            app:destination="@id/moviesFragment" />
+        <action
+            android:id="@+id/action_moviesSeriesBottomSheet_to_seriesFragment"
+            app:destination="@id/seriesFragment" />
+        <argument
+            android:name="fromFragment"
+            app:argType="string" />
+    </dialog>
+    <activity
+        android:id="@+id/moviesseriesDetailsActivity"
+        android:name="com.applyplugin.moviesseriesdatabase.MoviesSeriesDetailsActivity"
+        android:label="movies_activity_details"
+        tools:layout="@layout/movies_series_activity_details" >
+        <argument
+            android:name="movies_series_details"
+            app:argType="com.applyplugin.moviesseriesdatabase.model.MoviesSeriesResultDetails"
+            app:nullable="true"/>
+    </activity>
+</navigation>

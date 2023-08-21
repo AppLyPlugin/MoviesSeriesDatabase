@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alfa_slab_one</item>
+        <item>@font/andika_new_basic</item>
+        <item>@font/cormorant_garamond_light</item>
+        <item>@font/cormorant_sc_light</item>
+        <item>@font/cutive</item>
+        <item>@font/im_fell_dw_pica_sc</item>
+        <item>@font/im_fell_great_primer_sc</item>
+    </array>
+</resources>

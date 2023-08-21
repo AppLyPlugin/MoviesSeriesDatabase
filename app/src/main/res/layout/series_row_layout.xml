@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/seriesRowLayout"
+        android:layout_width="match_parent"
+        onSeriesItemClickListener="@{series}"
+        android:layout_height="150dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/seriesCardView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/material_dynamic_neutral90"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/movieThumbnail"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:imageUrl="@{series.posterPath}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_margin="10dp"
+                    android:text="@{series.title}"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/movieThumbnail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/movieThumbnail"
+                    app:layout_constraintTop_toTopOf="@+id/movieThumbnail"
+                    app:layout_constraintVertical_bias="0.100000024" />
+
+                <TextView
+                    android:id="@+id/titleOriginal"
+                    originalLang="@{series.originalLanguage}"
+                    originalTitle="@{series.originalTitle}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/genre"
+                    app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                <TextView
+                    android:id="@+id/releaseDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@{series.releaseDate}"
+                    app:layout_constraintStart_toEndOf="@+id/movieThumbnail"
+                    app:layout_constraintTop_toBottomOf="@+id/genre" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    doubleToString="@{series.voteAverage}"
+                    setValueFontColor="@{series.voteAverage}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Rating"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/movieThumbnail"
+                    app:layout_constraintTop_toBottomOf="@+id/releaseDate"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/genre"
+                    setGenres="@{series.genreIds}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="GENRE"
+                    android:textSize="8sp"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toEndOf="@+id/movieThumbnail"
+                    app:layout_constraintTop_toBottomOf="@+id/titleOriginal" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="series"
+            type="com.applyplugin.moviesseriesdatabase.model.MoviesSeriesResultDetails" />
+    </data>
+</layout>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Movies-Series Database</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movies_frag_holder">Movies Fragment</string>
+    <string name="series_frag_holder">Watcher Fragment</string>
+    <string name="movies_frag">Movies</string>
+    <string name="series_frag">Series</string>
+    <string name="watchlist_frag">Watchlist</string>
+
+    <string name="search">Search</string>
+    <string name="movies_search_hint">Search Movie</string>
+    <string name="series_search_hint">Search Series</string>
+
+    <string name="chip_year_alltime">All Time</string>
+    <string name="chip_year_2023">2023</string>
+    <string name="chip_year_2022">2022</string>
+    <string name="chip_year_2021">2021</string>
+    <string name="chip_year_2020">2020</string>
+    <string name="chip_year_2019">2019</string>
+    <string name="chip_year_2018">2018</string>
+    <string name="chip_year_2017">2017</string>
+    <string name="chip_year_2016">2016</string>
+    <string name="chip_year_2015">2015</string>
+    <string name="chip_year_2014">2014</string>
+    <string name="chip_year_2013">2013</string>
+    <string name="chip_year_2012">2012</string>
+    <string name="chip_year_2011">2011</string>
+    <string name="chip_year_2010">2010</string>
+
+    <string name="chip_sort_popularity.asc">popularity.asc</string>
+    <string name="chip_sort_popularity.desc">popularity.desc</string>
+    <string name="chip_sort_revenue.asc">revenue.asc</string>
+    <string name="chip_sort_revenue.desc">revenue.desc</string>
+    <string name="chip_sort_primary_release_date.asc">primary_release_date.asc</string>
+    <string name="chip_sort_primary_release_date.desc">primary_release_date.desc</string>
+    <string name="vote_average.asc">vote_average.asc</string>
+    <string name="vote_average.desc">vote_average.desc</string>
+    <string name="vote_count.asc">vote_count.asc</string>
+    <string name="vote_count.desc">vote_count.desc</string>
+
+    <string name="save_to_watchlist">Save To Watchlist</string>
+    <string name="delete_watchlist_menu">Delete Watchlist Menu</string>
+
+</resources>
